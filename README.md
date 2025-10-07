@@ -1,6 +1,6 @@
 # TeamPulse
 
-TeamPulse is a small, clear example of a real‑time collaboration app. It lets a team create a workspace, chat in real time, and edit text together in one place. It uses a simple demo mode by default, and can switch to full production mode with Firebase, MongoDB, and Stripe when you add real keys.
+TeamPulse is a small, example of a collaboration app. It lets a team create a workspace, chat in real time, and edit text together in one place. It uses a simple demo mode by default, and can switch to full production mode with Firebase, MongoDB, and Stripe when you add real keys.
 
 ## What you get
 - Workspaces with invite code
