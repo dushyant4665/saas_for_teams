@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Mobile-first tweaks for small screens */
+.workspace-card { @apply p-4 md:p-6 rounded-lg border border-gray-200 bg-white transition-shadow; }
+.card { @apply p-4 md:p-6 rounded-lg border border-gray-200 bg-white; }
+.btn-primary { @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-lg bg-primary-600 text-white hover:bg-primary-700 disabled:opacity-50; }
+.btn-secondary { @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-lg bg-gray-100 text-gray-900 hover:bg-gray-200; }
+.input-field { @apply w-full rounded-lg border-gray-300 focus:ring-primary-500 focus:border-primary-500; }
+.custom-scrollbar { scrollbar-width: thin; }
+
+@media (max-width: 640px) {
+  .custom-scrollbar { scrollbar-width: none; }
+}
+
 @layer base {
   html {
     font-family: 'Inter', system-ui, sans-serif;

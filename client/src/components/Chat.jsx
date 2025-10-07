@@ -213,7 +213,7 @@ const Chat = ({ workspace, socket, user }) => {
   };
 
   return (
-    <div className="flex flex-col h-[600px]">
+    <div className="flex flex-col h-[60vh] md:h-[600px]">
       {/* Chat Header */}
       <div className="flex items-center justify-between p-4 border-b border-gray-200">
         <div className="flex items-center">

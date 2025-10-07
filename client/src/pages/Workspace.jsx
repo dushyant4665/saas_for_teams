@@ -122,7 +122,7 @@ const Workspace = () => {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6">
         {/* Workspace Header */}
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
           <div className="flex items-center justify-between">
@@ -167,7 +167,7 @@ const Workspace = () => {
         </div>
 
         {/* Navigation Tabs */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 mb-6">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 mb-4 md:mb-6 overflow-x-auto">
           <nav className="flex space-x-8 px-6">
             {tabs.map((tab) => (
               <button
@@ -187,7 +187,7 @@ const Workspace = () => {
         </div>
 
         {/* Tab Content */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 min-h-[600px]">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 min-h-[60vh] md:min-h-[600px]">
           {activeTab === 'chat' && (
             <Chat 
               workspace={workspace} 
@@ -228,4 +228,3 @@ const Workspace = () => {
 };
 
 export default Workspace;
-

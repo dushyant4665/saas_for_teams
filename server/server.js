@@ -1,6 +1,7 @@
 const express = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
+const path = require('path');
 const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
@@ -50,6 +51,15 @@ app.use('/api/workspace', workspaceRoutes);
 app.use('/api/stripe', stripeRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/webhook', webhookRoutes);
+
+// Serve built client (optional single-service deploy)
+try {
+  const clientDist = path.join(__dirname, '..', 'client', 'dist');
+  app.use(express.static(clientDist));
+  app.get(['/', '/dashboard', '/workspace/:slug'], (req, res) => {
+    res.sendFile(path.join(clientDist, 'index.html'));
+  });
+} catch (_) {}
 
 // Health check
 app.get('/health', (req, res) => {
